@@ -1,0 +1,51 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light grey background to keep the focus on content */
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h1 {
+  color: #1e90ff; /* Vivid light blue color for the main text */
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#redirecting-message {
+  color: #00a8ff; /* Slightly different shade of light blue for variation */
+  font-size: 1.5em;
+  opacity: 0;
+  animation: fadeInOut 1s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+.loader {
+  border: 16px solid #f1f2f6; /* Very light grey, almost white, for the loader background */
+  border-radius: 50%;
+  border-top: 16px solid #74b9ff; /* Soft light blue for the loader bar */
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
